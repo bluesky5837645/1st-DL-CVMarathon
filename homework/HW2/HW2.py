@@ -19,10 +19,11 @@
 import cv2
 import numpy as np
 ima=cv2.imread("Part01/lena.png",cv2.IMREAD_COLOR)
-ima1=cv2.cvtColor(ima,cv2.COLOR_BGR2HLS)
-ima2=cv2.cvtColor(ima,cv2.COLOR_BGR2LAB)
-array=np.hstack((ima,ima1,ima2))
-cv2.imshow("1",array)
+ima1=cv2.cvtColor(ima,cv2.COLOR_BGR2HSV)
+ima2=cv2.cvtColor(ima,cv2.COLOR_BGR2HLS)
+ima3=cv2.cvtColor(ima,cv2.COLOR_BGR2LAB)
+array=np.hstack((ima,ima1,ima2,ima3))
+cv2.imshow("change color",array)
 cv2.waitKey(0)
 cv2.destroyWindow()
 
